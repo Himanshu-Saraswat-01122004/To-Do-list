@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+    <link rel = "stylesheet" href = "css/style.css">
+</head>
+<body>
+    <div class = "box">
+        <h1>Todo List</h1> 
+    </div>
+    <div class = "box">
+        <%for(var i = 0; i < exej.length; i++){ %>
+            <div class = "item">
+                <input type = "checkbox">
+                <p><%= exej[i].name %></p>
+            </div>
+        <%}%>
+        <!-- <% exej.forEach(function(data){ %>
+            <form action = "/delete" method = "POST">
+                <div class = "item">
+                    <input type = "checkbox" name = "checkbox1" value = "<%= data._id %>" onchange="this.form.submit()">
+                    <p><%=data.name%></p>
+                </div>
+            </form>
+        <%})%> -->
+        <form action = '/' method = "POST">
+            <input type = "text" name = "ele1" placeholder = "Enter the task">
+            <button type = "submit">+</button>
+        </form>
+    </div>
+</body>
+</html>
